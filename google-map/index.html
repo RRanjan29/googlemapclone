@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Google Maps Clone</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>🗺️ Google Maps Clone</h1>
+    <div class="controls">
+      <input id="searchBox" placeholder="Search..." />
+      <button onclick="searchLocation()">Search</button>
+      <button onclick="toggleTheme()">Toggle Theme</button>
+      <select id="categorySelect" onchange="filterCategory()">
+        <option value="">Select category</option>
+      </select>
+      <button onclick="showFavorites()">Favorites ⭐</button>
+    </div>
+  </header>
+  <div id="map"></div>
+
+  <div id="route-controls" class="hidden">
+    <input id="fromBox" placeholder="From address" />
+    <input id="toBox" placeholder="To address" />
+    <button onclick="getRoute()">Get Route</button>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
